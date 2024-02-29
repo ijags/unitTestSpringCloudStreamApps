@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    function:
+      definition: uppercase|reverse;stringSupplier
+    stream:
+      bindings:
+        test-publisher:
+          destination: stringPublisher
+        stringSupplier-out-0: 
+          destination: test-destination
+
